@@ -1,0 +1,18 @@
+@use 'src/styles/vars';
+
+/* ------------- SPELL BUTTONS --------------- */
+
+.spellButtons{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   @media screen and (min-width: 950px) {
+    flex-direction: row;
+  }
+
+/* - - - - - - - - BUTTON - - - - - - - - - - - */
+
+  &__button{
+    margin: vars.$gutter;
+  }
+}

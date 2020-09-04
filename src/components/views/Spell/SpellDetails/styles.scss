@@ -1,0 +1,52 @@
+@use 'src/styles/vars';
+
+/* ------------- SPELL DETAILS --------------- */
+
+.spellDetails{
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  word-break: break-word;
+  height: 300px;
+  @media screen and (min-width: 950px) {
+    height: 300px;
+  }
+
+/* - - - - - - - - - TITLE - - - - - - - - - - */
+
+  &__title{
+    margin-bottom: vars.$gutter * 4;
+    @media screen and (min-width: 950px) {
+      margin-bottom: vars.$gutter * 5;
+    }
+  }
+
+/* - - - - - - - DESCRIPTION - - - - - - - - */
+
+  &__description{
+    margin-bottom: vars.$gutter * 5;
+  }
+
+/* - - - - - - - GUILLEMETS - - - - - - - - */
+
+  &__description span{
+    color: black;
+    text-align: left;
+    font-size: 2rem;
+    font-family: vars.$alt-font;
+    text-shadow: 1px 1px 1px black;
+    @media screen and (min-width: 600px) {
+      font-size: 4rem;
+    }
+  }
+
+/* - - - - - - - GUILLEMET 2 - - - - - - - */
+
+  &__description span:last-of-type{
+    text-align: right;
+    margin-top: 2rem;
+  }
+}
+

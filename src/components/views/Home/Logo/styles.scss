@@ -1,0 +1,12 @@
+@use 'src/styles/vars';
+
+/* ------------- LOGO --------------- */
+
+.logo{
+  width: 90%;
+  margin: 0 auto vars.$gutter * 2;
+  @media screen and (min-width: 950px) {
+    width: 850px;
+    margin: 0 auto vars.$gutter;
+  }
+}
