@@ -12,6 +12,9 @@ import { stopLoading } from 'src/actions/load';
 // Import : Utilities functions
 import { getRandomNumber } from 'src/selectors';
 
+// Import : datas
+import spells from 'src/datas/spells';
+
 /*         
 * Harry Potter Api Call
 * --> Get all Spells 
@@ -19,12 +22,15 @@ import { getRandomNumber } from 'src/selectors';
 export default (store) => (next) => (action) => {
   switch (action.type) {
     case GET_SPELLS_DETAILS: {
-      axios.get('https://www.potterapi.com/v1/spells?key=$2a$10$nmJZ60IjtEvFvRINrvR9CeKI5Ib.YtSaNL9lraVV4OOkr89z4y2U6')
+      
+      // potterapi.com is currently off. So to not change all code we temporary make fake API call & use local js file with spells list.
+      axios.get('https://jcdle-porfolio.herokuapp.com') // https://www.potterapi.com/v1/spells?key=$2a$10$nmJZ60IjtEvFvRINrvR9CeKI5Ib.YtSaNL9lraVV4OOkr89z4y2U6
+     
         .then((response) => {
-
+        
           // All Spells datas
-          const spellsList = response.data;
-
+          const spellsList = spells; //response.data with potterapi.com
+        
           // Get a random spell --> spellsList[randomIndexInSpellListArray]
           const randomSpell = spellsList[getRandomNumber(spellsList.length - 1)];
           
@@ -32,10 +38,10 @@ export default (store) => (next) => (action) => {
           store.dispatch(saveSpellsDetails(randomSpell));
 
         }).catch((error) => {
-          window.location = '/';
-          console.log(error)})
+         window.location = '/';
+         console.log(error)
+        })
         .finally(() => {
-
           // Stop loading
           store.dispatch(stopLoading());
         });

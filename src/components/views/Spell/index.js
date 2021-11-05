@@ -17,11 +17,15 @@ import './styles.scss';
 * SpellDetails component
 */
 const Spell = () => (
-<div className="spell">
-  <BGParchment />
-  <SpellDetails />
-  <SpellButtons />
-</div>
+  /* Spell component contain the parchment decoration image, spells details & actions buttons */
+  <div className="spell">
+    {/* BGParchment component */}
+    <BGParchment />
+    {/* SpellDetails component */}
+    <SpellDetails />
+    {/* SpellButtons component */}
+    <SpellButtons />
+  </div>
 );
 
 /* Export component */

@@ -16,13 +16,19 @@ import './styles.scss';
 /*
 * Home component
 */
-const Home = () => (
-  <div className="home">
-    <Logo />
-    <Title />
-    <StartButton />
-  </div>
-);
+const Home = () => {
+  return (
+    /* Home Page contain logo, title & start button */
+    <div className="home" >
+      {/* Logo component */}
+      <Logo />
+      {/* Title component */}
+      <Title />
+      {/* Start Button component */}
+      <StartButton />
+    </div>
+  )
+}
 
 /* Export component */
 export default Home;

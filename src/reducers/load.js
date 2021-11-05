@@ -3,11 +3,12 @@
 \*         */
 
 // Import : Actions
-import {START_LOADING, STOP_LOADING} from 'src/actions/load';
+import {APP_IS_LOADED, START_LOADING, STOP_LOADING} from 'src/actions/load';
 
 /* Initial State */
 const initialState = {
   isLoading: false,
+  appIsLoaded: false,
 };
 
 /*
@@ -15,6 +16,11 @@ const initialState = {
 */
 const load = (state = initialState, action = {}) => {
   switch (action.type) {
+  case APP_IS_LOADED:
+    return {
+      ...state,
+      appIsLoaded: action.appIsLoadedValue,
+    };
     case START_LOADING:
       return {
         ...state,

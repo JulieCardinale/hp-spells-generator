@@ -1,7 +1,9 @@
 @use 'reset';
 @use 'vars';
 
-/* ------------- BODY --------------- */
+/* ----------------------------------------------------- */
+/* ----------------------- BODY ------------------------ */
+/* ----------------------------------------------------- */
 
 body {
   display: flex;
@@ -12,15 +14,17 @@ body {
   margin: auto;
   font-family: vars.$main-font;
   text-align: center;
-  background-image : url("../assets/img/hp-bg-castle.jpg");
-  background-size: cover;
+  background-color: black;
 }
 
-/* ------------- TITRES --------------- */
+/* ----------------------------------------------------- */
+/* --------------------- TITLES ------------------------ */
+/* ----------------------------------------------------- */
 
 h1 {
   width: 90%;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
   color: vars.$color-yellow;
   text-shadow:
   -1px -1px 0 #000,  
@@ -29,9 +33,15 @@ h1 {
     1px 1px 0 #000,
     2px 2px 3px black;
   text-align: center;
+  margin-bottom: vars.$gutter * 2;
   @media screen and (min-width: 600px) {
+    font-size: 2rem;
+    margin-bottom: vars.$gutter * 6;
+  }
+  @media screen and (min-width: 950px) {
     font-size: 3.5rem;
   }
+
 }
 
 /* ------------- BUTTONS --------------- */
@@ -39,7 +49,7 @@ h1 {
 button {
   color: vars.$color-yellow;
   font-family: 'Lora', serif;
-  font-size: 1.3rem;
+  font-size: 1rem;
   text-transform: uppercase;
   text-shadow:
   -1px -1px 0 #000,  
@@ -47,7 +57,7 @@ button {
    -1px 1px 0 #000,
     1px 1px 0 #000,
     2px 2px 3px black;
-  width: 200px;
+  width: 12.5rem;
   border: 1px solid vars.$color-yellow;
   border-radius: 10px;
   padding: 1rem;
@@ -58,7 +68,10 @@ button {
     transform: scale(1.08);
   }
   @media screen and (min-width: 600px) {
-    width: 300px;
+    font-size: 1.5rem;
+  } 
+  @media screen and (min-width: 950px) {
+    width: 18.5rem;
     font-size: 2rem;
   } 
 }
@@ -67,8 +80,12 @@ button {
 
 p {
   color: vars.$color-red;
-  font-size: 1.3rem;
+  font-size: 1rem;
+  line-height: 2rem;
   @media screen and (min-width: 600px) {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
+  @media screen and (min-width: 950px) {
+    font-size: 2rem;
+  } 
 }

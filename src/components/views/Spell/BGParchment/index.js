@@ -15,9 +15,10 @@ import './styles.scss';
 * BGParchment component
 */
 const BGParchment = () => (
+  /* This component contain a parchment image displayed behind page informations */
   <img className="bgParchment"
-  src={Parchment}
-  alt="Parchement background"
+    src={Parchment}
+    alt="Parchement background"
   />
 );
 

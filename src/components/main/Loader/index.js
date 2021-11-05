@@ -12,13 +12,14 @@ import LoaderHP from 'src/assets/img/hp-loader.gif';
 import './styles.scss';
 
 /*
-* Music component
+* Loader component
 */
 const Loader = () => {
     return (
+    /* Loader is a gif image */   
     <img className="loader"
         src={LoaderHP}
-        alt="Music ON"
+        alt="Harry Potter loader"
     />
     )  
 };

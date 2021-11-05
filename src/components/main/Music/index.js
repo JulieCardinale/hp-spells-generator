@@ -16,49 +16,44 @@ import './styles.scss';
 /*
 * Music component
 */
-const Music = ({ changeMusicPreferences, musicIsMute }) => {
-  
-    /*
-    * Handle music preferences
-    * Music is mute or audible
-    */
-    const handleMusicPreferences = () => {
-       changeMusicPreferences();
-    }
+const Music = ({ changeMusicPreferences, musicIsMute }) => (
 
-    return (
-        <div onClick={handleMusicPreferences} className="music">
+    /* Handle music preferences on click (audible or mute) */
+    <div onClick={() => (changeMusicPreferences())} className="music">
 
-            {/* - - - - - ICONES - - - - - */}
+        {/* - - - - - ICONES - - - - - */}
+        {/* If music is mute display normal speaker */}
+        {!musicIsMute && <>
+            <img className="music__on"
+                src={MusicON}
+                alt="Music ON"
+            />
+        </>}
+        {/* If music is mute display mute speaker */}
+        {musicIsMute && <>
+            <img className="music__off"
+                src={MusicOFF}
+                alt="Music OFF"
+            />
+        </>}
 
-            {!musicIsMute && <>
-                <img className="music__on"
-                    src={MusicON}
-                    alt="Music ON"
-                />
-            </>}
-           
-            {musicIsMute && <>
-                <img className="music__off"
-                    src={MusicOFF}
-                    alt="Music OFF"
-                />
-            </>}
+        {/* - - - - - MUSIC SELECTION - - - - - */}
+        {/* Audio element configuration */}
+        {!musicIsMute && 
+        <audio
+            autoPlay
+            loop
+            muted={musicIsMute}
+            src={MusicHP}>
+            {/* If client can't display audio element */}
+            Your browser does not support the
+            <code>audio</code> element.
+        </audio>}
 
-            {/* - - - - - MUSIC SELECTION - - - - - */}
+    </div>
+    
+);  
 
-            {!musicIsMute && <audio
-                autoPlay
-                loop
-                muted={musicIsMute}
-                src={MusicHP}>
-                Your browser does not support the
-                <code>audio</code> element.
-            </audio>}
-
-        </div>
-    )  
-};
 
 /* Export component */
 export default Music;

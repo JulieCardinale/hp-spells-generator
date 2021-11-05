@@ -5,13 +5,11 @@
 // Import : React
 import React from 'react';
 
-// Import : Styles
-import './styles.scss';
-
 /*
 * Title component
 */
 const Title = () => (
+  /* Home title */
   <h1 className="title">
     Random spells generator
   </h1>

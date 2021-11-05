@@ -1,52 +1,35 @@
 @use 'src/styles/vars';
-
-/* ------------- SPELL DETAILS --------------- */
-
+/* ----------------------------------------------------- */
+/* ------------- SPELL DETAILS COMPONENT --------------- */
+/* ------------------- Main block ---------------------- */
+/* ----------------------------------------------------- */
 .spellDetails{
-  width: 65%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 70%;
   word-break: break-word;
-  height: 300px;
-  @media screen and (min-width: 950px) {
-    height: 300px;
-  }
-
-/* - - - - - - - - - TITLE - - - - - - - - - - */
-
-  &__title{
-    margin-bottom: vars.$gutter * 4;
-    @media screen and (min-width: 950px) {
-      margin-bottom: vars.$gutter * 5;
+  /* --------------------------------------------------- */
+  /* --- Description block, definition & guillemets ---- */
+  /* --------------------------------------------------- */
+  &__description {
+    margin-bottom: vars.$gutter * 2;
+    @media screen and (min-width: 600px) {
+      margin-bottom: vars.$gutter * 6;
     }
   }
-
-/* - - - - - - - DESCRIPTION - - - - - - - - */
-
-  &__description{
-    margin-bottom: vars.$gutter * 5;
-  }
-
-/* - - - - - - - GUILLEMETS - - - - - - - - */
-
+  /* --------------------------------------------------- */
+  /* ----------------- Guillemets only ----------------- */
+  /* --------------------------------------------------- */
   &__description span{
     color: black;
     text-align: left;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: vars.$alt-font;
-    text-shadow: 1px 1px 1px black;
     @media screen and (min-width: 600px) {
-      font-size: 4rem;
+      font-size: 3rem;
     }
-  }
-
-/* - - - - - - - GUILLEMET 2 - - - - - - - */
-
-  &__description span:last-of-type{
-    text-align: right;
-    margin-top: 2rem;
   }
 }
 

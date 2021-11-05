@@ -16,7 +16,7 @@ import store from 'src/store';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 // Component to render
-import AppSG from 'src/components/main/AppSG';
+import AppSG from 'src/containers/AppSG';
 
 /* 
 * Render 

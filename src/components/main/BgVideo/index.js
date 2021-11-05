@@ -12,6 +12,7 @@ import StarsVideo from 'src/assets/video/hp-bg-stars.mp4';
 * BgVideo component
 */
 const BgVideo = () => (
+  /* Configure video element */
   <video
       autoPlay
       loop
@@ -31,6 +32,7 @@ const BgVideo = () => (
       src={StarsVideo}
       type="video/mp4"
     />
+    {/* If client can't display video element */}
     Your browser does not support the
       <code>video</code> element.
   </video>

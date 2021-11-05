@@ -15,6 +15,7 @@ import './styles.scss';
 * Logo component
 */
 const Logo = () => (
+  /* Logo Harry Potter in PNG */
   <img className="logo"
     src={HPLogo}
     alt="Logo Harry Potter"

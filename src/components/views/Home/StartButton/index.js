@@ -15,7 +15,7 @@ const StartButton = ({ getSpellsDetails, startLoading }) => {
   
   /*
   * Handle click on "Start Button"
-  * Get a random spell
+  * Get a random spell + start Loading
   */
   const handleOnClick = () => {
     getSpellsDetails();
